@@ -216,6 +216,12 @@ class MailchimpExport
 
             // if we have headings => combine them with the dataset
             if ($headings !== null) {
+                // Sometimes mailchimps gives an smaller array of data because of missing data.
+                // This will cause an error in array_column
+                while(count($headings) > count($currentDataSet)){
+                    $currentDataSet[]= null;
+                }
+                
                 $returnValue = array_combine($headings, $currentDataSet);
             } else {
                 $returnValue = $currentDataSet;

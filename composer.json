@@ -1,7 +1,7 @@
 {
     "name": "sschulze/mailchimp-export",
     "type": "library",
-    "version": "1.2",
+    "version": "1.2.1",
     "description": "API client library for the MailChimp Export service",
     "keywords": ["export", "api"],
     "homepage": "https://github.com/nahpeps/mailchimp-export-api-php",
